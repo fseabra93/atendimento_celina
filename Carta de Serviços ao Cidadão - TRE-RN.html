@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://estatico.tre-rn.jus.br/carta-servicos.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta de Serviços ao Cidadão - TRE-RN</title>
+<meta name="description" content="Carta completa de serviços do Tribunal Regional Eleitoral do Rio Grande do Norte">
+<link href="./Carta de Serviços ao Cidadão - TRE-RN_files/css2" rel="stylesheet">
+<style>
+/* VARIÁVEIS E RESET */
+:root{--p:#1e3a5f;--pl:#2d5580;--s:#d97706;--sl:#f59e0b;--success:#047857;--info:#0284c7;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt2:#475569;--border:#e2e8f0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Public Sans',-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden}
+
+/* CABEÇALHO */
+.hd{background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;padding:2rem 1rem;box-shadow:0 4px 20px rgba(0,0,0,.1);position:sticky;top:0;z-index:1000}
+.hd-c{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.logo{font-family:'Sora',sans-serif;font-weight:700;font-size:1.5rem}
+.subt{font-size:.9rem;opacity:.9}
+.search{flex:1;min-width:280px;max-width:600px}
+#s{width:100%;padding:.875rem 1rem;border:2px solid rgba(255,255,255,.2);border-radius:1rem;background:rgba(255,255,255,.15);color:#fff;font-size:1rem;transition:all .3s}
+#s::placeholder{color:rgba(255,255,255,.7)}
+#s:focus{outline:0;background:rgba(255,255,255,.25);border-color:var(--sl)}
+
+/* MENUS / ABAS (ALTERADO PARA RESPONSIVIDADE) */
+.tabs{
+    max-width:1400px;
+    margin:0 auto;
+    padding:1rem;
+    display:flex;
+    gap:.5rem;
+    /* Alteração crítica: permite quebrar linha e remove rolagem horizontal */
+    flex-wrap: wrap; 
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+    background: #fff;
+}
+
+.tab{
+    padding:0.75rem 1.25rem;
+    border:none;
+    background:transparent; /* Fundo transparente inicialmente para ficar mais leve */
+    color:var(--txt2);
+    font-size:.95rem;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:0.75rem; /* Bordas arredondadas completas */
+    transition:all .3s;
+    white-space:nowrap;
+    flex-grow: 1; /* Faz os botões ocuparem o espaço disponível */
+    text-align: center;
+}
+.tab:hover{background:var(--bg);color:var(--p)}
+.tab.active{background:var(--p);color:#fff;box-shadow: 0 4px 6px rgba(0,0,0,0.1)}
+
+/* CONTEÚDO PRINCIPAL */
+.cnt{max-width:1400px;margin:0 auto;padding:3rem 1rem}
+.hero{background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;padding:3rem 1.5rem;border-radius:1rem;margin-bottom:3rem;box-shadow:0 10px 40px rgba(0,0,0,.1)}
+.hero h1{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;margin-bottom:1.5rem}
+
+.tc{display:none;animation:fi .5s ease}
+.tc.active{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+.sh{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:3px solid var(--s)}
+.sh h2{font-family:'Sora',sans-serif;font-size:clamp(1.5rem, 4vw, 2rem);color:var(--p);margin-bottom:.5rem;font-weight:700}
+
+/* GRIDS E CARDS */
+.sg{
+    display:grid;
+    /* Ajuste para telas menores: minmax reduzido para 280px */
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:2rem;
+    margin-bottom:3rem;
+}
+.sc{
+    background:var(--card);
+    border-radius:1rem;
+    padding:2rem;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    transition:all .3s;
+    border:2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+.sc:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(0,0,0,.15);border-color:var(--s)}
+
+.shr{display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:1.5rem}
+.si{width:48px;height:48px;background:linear-gradient(135deg,var(--s),var(--sl));border-radius:1rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+.st h3{font-family:'Sora',sans-serif;font-size:1.25rem;color:var(--p);margin-bottom:.25rem;font-weight:600; line-height: 1.3;}
+.badge{display:inline-block;padding:.25rem .75rem;background:var(--sl);color:#fff;border-radius:2rem;font-size:.75rem;font-weight:600;margin-left:.5rem; vertical-align: middle;}
+
+.sd{color:var(--txt2);margin-bottom:1rem;line-height:1.6; flex-grow: 1;}
+
+.di{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;background:var(--bg);border-radius:.5rem;margin-bottom:.5rem;font-size:.9rem}
+.dii{flex-shrink:0;color:var(--s);font-size:1.1rem}
+.dil{font-weight:600;color:var(--p);min-width:80px} /* Reduzi min-width para mobile */
+
+.sa{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;gap:.5rem;flex-wrap:wrap}
+.btn{padding:.75rem 1.5rem;border:none;border-radius:1rem;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block; text-align: center;}
+.bp{background:linear-gradient(135deg,var(--s),var(--sl));color:#fff}
+.bp:hover{transform:translateY(-2px);box-shadow:0 6px 15px rgba(217,119,6,.4)}
+
+.ib{background:linear-gradient(135deg,var(--info),#0ea5e9);color:#fff;padding:2rem;border-radius:1rem;margin-bottom:2rem}
+.ib h3{font-family:'Sora',sans-serif;font-size:1.5rem;margin-bottom:1rem}
+.ib ul{list-style:none}
+.ib li{padding:.5rem 0 .5rem 1.5rem;position:relative}
+.ib li::before{content:'✓';position:absolute;left:0;font-weight:700}
+
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem}
+.cc{background:var(--card);padding:2rem;border-radius:1rem;box-shadow:0 4px 15px rgba(0,0,0,.1);border-left:4px solid var(--s)}
+.cc h3{font-family:'Sora',sans-serif;color:var(--p);margin-bottom:1.5rem}
+.ci{padding:.5rem 0;color:var(--txt2); word-break: break-word;}
+
+.ft{background:var(--p);color:#fff;padding:3rem 1rem;margin-top:3rem;text-align:center}
+.ft p{margin:.5rem 0}
+
+/* MEDIA QUERIES ESPECÍFICAS PARA MOBILE */
+@media (max-width: 992px) {
+    .hd-c { flex-direction: column; text-align: center; gap: 1rem; }
+    .search { width: 100%; }
+    .logo { margin-bottom: 0.5rem; }
+    /* Ajuste para tablets: 3 abas por linha ou conforme caber */
+    .tab { flex: 1 1 30%; } 
+}
+
+@media (max-width: 600px) {
+    .cnt { padding: 1.5rem 1rem; }
+    .hero { padding: 2rem 1rem; text-align: center; }
+    
+    /* Abas em Mobile: 2 por linha para facilitar o toque */
+    .tab { flex: 1 1 45%; font-size: 0.85rem; padding: 0.75rem 0.5rem; }
+    
+    .sg { grid-template-columns: 1fr; } /* Card ocupa largura total */
+    .badge { display: block; width: fit-content; margin: 0.5rem 0 0 0; } /* Badge quebra linha no mobile */
+    .shr { flex-direction: column; gap: 0.5rem; } /* Ícone acima do título no mobile */
+    .si { margin-bottom: 0.5rem; }
+    
+    .sa { justify-content: stretch; }
+    .btn { flex: 1; } /* Botões ocupam largura total disponível */
+}
+</style>
+</head>
+<body>
+<header class="hd">
+<div class="hd-c">
+<div><div class="logo">TRE-RN</div><div class="subt">Tribunal Regional Eleitoral do Rio Grande do Norte</div></div>
+<div class="search"><input type="search" id="s" placeholder="Buscar serviços..." aria-label="Buscar"></div>
+</div>
+</header>
+<nav class="tabs">
+<button class="tab active" data-tab="inicio">🏠 Mensagens iniciais</button>
+<button class="tab" data-tab="eleitor">Tirar primeiro título</button>
+<button class="tab" data-tab="transferencia">Transferência de domicílio</button>
+<button class="tab" data-tab="revisao">Revisão do título</button>
+<button class="tab" data-tab="candidato">📋 Candidato</button>
+<button class="tab" data-tab="partido">🏛️ Partido</button>
+<button class="tab" data-tab="advogado">⚖️ Advogado</button>
+<button class="tab" data-tab="institucional">📚 Institucional</button>
+<button class="tab" data-tab="memoria">🏛️ Memória</button>
+<button class="tab" data-tab="contato">📞 Contato</button>
+</nav>
+<main class="cnt">
+
+<!-- INÍCIO -->
+<div id="inicio-content" class="tc active">
+<!-- <div class="hero">
+<h1>Carta de Serviços ao Cidadão</h1>
+<h2 style="font-size:1.5rem;font-weight:400;margin-bottom:2rem;opacity:0.95">Tribunal Regional Eleitoral do Rio Grande do Norte</h2>
+<p style="font-size:1.1rem;line-height:1.8">Esta carta apresenta todos os serviços prestados pelo TRE-RN, organizados por categoria para facilitar sua busca. Aqui você encontra informações sobre prazos, requisitos, contatos e links de acesso direto aos serviços.</p>
+</div> -->
+
+<div class="ib" style="background:linear-gradient(135deg,var(--p),var(--pl));margin-bottom:3rem">
+    <h1>Mensagens iniciais</h1>
+    <p style="font-size:1.05rem;line-height:1.8;margin-top:1rem">
+    Informe por favor o número do seu título de eleitor ou seu CPF para que eu possa consultar seu cadastro
+    </p>
+    <p style="font-size:1.05rem;line-height:1.8;margin-top:1rem">
+    -------------------------------------------------------------------------------------------
+    </p>
+    <p style="font-size:1.05rem;line-height:1.8;margin-top:1rem">
+    Para que possamos localizar seu cadastro informe:<br>Número do seu título de eleitor ou seu CPF<br>Seu nome completo<br>Data de nascimento<br>Nome da mãe<br>Nome do pai
+    </p>
+</div>
+</div>
+
+
+<!-- ELEITOR - 18 SERVIÇOS -->
+<div id="eleitor-content" class="tc">
+<div class="sh"><h3>Perguntar a idade:</h3><p>Qual a sua idade, ou da pessoa que deseja tirar o título?</p></div>
+<div class="sh"><h3>Mensagem geral de funcionamento dos serviços</h3><p>No momento só é possível tirar o título presencialmente.<br>Pode ser feito na sede do Cartório Eleitoral do município onde você deseja votar ou em postos de atendimento temporários montados pelo TRE-RN nos shoppings Midway, Partage Norte Shopping, Shopping Cidade Verde e Partage Mossoró. <br>Os atendimentos nos shoppings funcionarão apenas até o dia 28/04, nos horários normais de funcionamento das lojas dos shoppings</p></div>
+<div class="sg">
+
+<div class="sc" data-k="alistamento cadastro registro titulo eleitor novo">
+<div class="shr"><div class="si">🧑</div><div class="st"><h3>Tirar primeiro título</h3></div></div>
+<div class="di"><span class="dii">🪪</span><div><span class="dil">Documento oficial com foto:</span> <br>RG, Carteira de Trabalho, Passaporte, Certidão de Nascimento/Casamento ou carteira profissional (ex.: OAB, CRM)<br>Carteira Nacional de Habilitação (CNH) não é aceita para o primeiro título pois não contém informações de nacionalidade/naturalidade</div></div>
+<div class="di"><span class="dii">🏠</span><div><span class="dil">Comprovante de residência:</span> <br>Conta de água, luz, telefone, ou até mesmo um envelope de correspondência recente. <br>Se o comprovante não estiver em seu nome, você pode usar um documento que comprove o parentesco (ex.: certidão de nascimento) com a pessoa responsável pelo comprovante</div></div>
+<div class="di"><span class="dii">🪖</span><div><span class="dil">Comprovante de quitação militar:</span> Exigido apenas para pessoas do sexo masculino que completam 19 anos no ano do pedido . A exigência vale de 1º de janeiro a 31 de dezembro do ano em que completa 19 anos</div></div>
+</div>
+
+<div class="sc" data-k="transferencia mudanca domicilio votacao mudar">
+<div class="shr"><div class="si">🔄</div><div class="st"><h3>Transferência Eleitoral</h3><span class="badge">Online</span></div></div>
+<p class="sd">Mude seu domicílio eleitoral para votar em outro município ou país. Serviço gratuito e disponível durante todo o ano, exceto no período que antecede as eleições.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 150 dias antes do 1º turno das eleições</div></div>
+<div class="di"><span class="dii">📍</span><div><span class="dil">Onde:</span> Internet ou Cartório Eleitoral</div></div>
+<div class="di"><span class="dii">👤</span><div><span class="dil">Quem pode solicitar:</span> Eleitores com título regular (não cancelado nem suspenso) que tenham mudado de endereço para outro município ou país, ou que desejem votar em uma seção mais próxima de sua residência atual</div></div>
+<div class="di"><span class="dii">📄</span><div><span class="dil">Documentos necessários:</span> Documento oficial com foto (RG, CNH, Passaporte, Carteira de Trabalho) + Comprovante de residência atualizado no novo endereço</div></div>
+<div class="di"><span class="dii">🏠</span><div><span class="dil">Mudança dentro do mesmo município:</span> Não é necessário transferência — apenas atualize o endereço no cartório</div></div>
+<div class="di"><span class="dii">🗺️</span><div><span class="dil">Mudança para outro estado:</span> Transferência obrigatória para votar no novo estado</div></div>
+<div class="di"><span class="dii">🌍</span><div><span class="dil">Mudança para o exterior:</span> Transferência para a zona eleitoral especial de brasileiros no exterior (ZZ)</div></div>
+<div class="di"><span class="dii">🚫</span><div><span class="dil">Período eleitoral:</span> Transferência fica suspensa 150 dias antes do 1º turno até após a diplomação dos eleitos</div></div>
+<div class="di"><span class="dii">💻</span><div><span class="dil">Passo a passo pela internet:</span> Acesse o Autoatendimento Eleitoral do TSE → Selecione "Título Net" → "Transferência de domicílio" → Informe seus dados e novo endereço → Anexe foto do documento e comprovante de residência → Após análise (até 5 dias úteis), compareça ao cartório do novo município para coleta da biometria (se ainda não tiver cadastrada)</div></div>
+<div class="di"><span class="dii">⚠️</span><div><span class="dil">Importante:</span> A transferência altera sua seção eleitoral e zona. Verifique sempre a situação do seu título no site do TSE após a conclusão do processo</div></div>
+<div class="sa"><a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar</a></div>
+</div>
+
+<div class="sc" data-k="revisao atualizacao dados cadastrais corrigir alterar">
+<div class="shr"><div class="si">✏️</div><div class="st"><h3>Revisão Eleitoral</h3><span class="badge">Online</span></div></div>
+<p class="sd">Atualize dados cadastrais ou altere local de votação no mesmo município. Pode atualizar: dados pessoais, sociais, endereço, local de votação.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Imediato</div></div>
+<div class="sa"><a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar</a></div>
+</div>
+
+<div class="sc" data-k="segunda via titulo etitulo reimpressao app digital">
+<div class="shr"><div class="si">🆔</div><div class="st"><h3>Segunda Via do Título</h3><span class="badge">Online</span></div></div>
+<p class="sd">Obtenha segunda via online ou baixe o e-Título (app para iOS/Android). Entrega imediata.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Imediato</div></div>
+<div class="di"><span class="dii">📱</span><div><span class="dil">App:</span> e-Título (iOS e Android)</div></div>
+<div class="sa">
+<a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral" class="btn bp" target="_blank" rel="noopener noreferrer">Reimpressão</a>
+<a href="https://play.google.com/store/apps/details?id=br.jus.tse.eleitoral.etitulo" class="btn bp" target="_blank" rel="noopener noreferrer">Android</a>
+<a href="https://apps.apple.com/br/app/e-t%C3%ADtulo/id1320338088" class="btn bp" target="_blank" rel="noopener noreferrer">iOS</a>
+</div>
+</div>
+
+<div class="sc" data-k="justificativa ausencia falta votacao nao votei">
+<div class="shr"><div class="si">📄</div><div class="st"><h3>Justificativa de Ausência</h3><span class="badge">Online</span></div></div>
+<p class="sd">Justifique sua ausência no dia da eleição ou até 60 dias após cada turno. Pode usar e-Título ou site.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 60 dias após eleição</div></div>
+<div class="di"><span class="dii">📱</span><div><span class="dil">Onde:</span> e-Título, site, ou Cartório após eleição</div></div>
+<div class="sa">
+<a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/justifica-tn3/home" class="btn bp" target="_blank" rel="noopener noreferrer">Justificar Online</a>
+</div>
+</div>
+
+<div class="sc" data-k="local votacao onde voto secao consultar">
+<div class="shr"><div class="si">📍</div><div class="st"><h3>Consultar Local de Votação</h3><span class="badge">Online</span></div></div>
+<p class="sd">Descubra onde você vota, sua seção eleitoral e endereço completo do local.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Imediato</div></div>
+<div class="sa"><a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/atendimento-eleitor" class="btn bp" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+</div>
+
+<div class="sc" data-k="multa pagamento debito gru guia">
+<div class="shr"><div class="si">💰</div><div class="st"><h3>Pagamento de Multa Eleitoral</h3><span class="badge">Online</span></div></div>
+<p class="sd">Consulte e pague débitos eleitorais decorrentes de ausência às urnas ou trabalhos eleitorais.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Imediato</div></div>
+<div class="di"><span class="dii">💳</span><div><span class="dil">Pagamento:</span> Via GRU (Guia de Recolhimento)</div></div>
+<div class="sa">
+<a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral" class="btn bp" target="_blank" rel="noopener noreferrer">Consultar Débitos</a>
+<a href="https://www.tre-rn.jus.br/servicos-eleitorais/debitos-do-eleitor" class="btn bp" target="_blank" rel="noopener noreferrer">Emitir GRU</a>
+</div>
+</div>
+
+<div class="sc" data-k="eleitor exterior fora pais estrangeiro internacional">
+<div class="shr"><div class="si">🌍</div><div class="st"><h3>Eleitor no Exterior</h3><span class="badge">TRE-DF</span></div></div>
+<p class="sd">Atendimento para eleitores que residem fora do Brasil. Serviço prestado pela 1ª Zona Eleitoral do TRE/DF.</p>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Tel:</span> +55 (61) 3048-4000 / 99674-5453</div></div>
+<div class="di"><span class="dii">💬</span><div><span class="dil">WhatsApp:</span> <a href="https://wa.me/556130481772" target="_blank" rel="noopener noreferrer">(61) 3048-1772</a> (12h-18h)</div></div>
+<div class="di"><span class="dii">✉️</span><div><span class="dil">E-mail:</span> eleitor.exterior@tre-df.jus.br</div></div>
+<div class="di"><span class="dii">⏰</span><div><span class="dil">Horário:</span> Segunda a sexta, 12h-19h</div></div>
+<div class="sa"><a href="https://www.tse.jus.br/servicos-eleitorais/eleitorado-no-exterior" class="btn bp" target="_blank" rel="noopener noreferrer">Mais Informações</a></div>
+</div>
+
+<div class="sc" data-k="situacao titulo eleitor consulta">
+<div class="shr"><div class="si">🔍</div><div class="st"><h3>Situação do Título Eleitoral</h3><span class="badge">Online</span></div></div>
+<p class="sd">Consulte a situação do seu título eleitoral pela internet.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Imediato</div></div>
+<div class="sa"><a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/atendimento-eleitor" class="btn bp" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+</div>
+</div>
+</div>
+
+<!-- TRANSFERENCIA -->
+<div id="transferencia-content" class="tc">
+<div class="sh"><h3>Confirmar:</h3><p>Você deseja mudar seu local de votação para outro município ou para outro local no mesmo município?</p></div>
+<div class="sh"><h3>Respondeu que quer apenas mudar para outro local no mesmo município</h3>
+    
+    <p><button class="tab" data-tab="transferencia">Revisão</button></p></div>
+<div class="sg">
+
+<div class="sc" data-k="transferencia sem pendencias">
+<div class="shr"><div class="si">🔄</div><div class="st"><h3>Nenhuma pendência no cadastro</h3></div></div>
+<p class="sd">Como identificamos que não há pendências no seu cadastro, a transferência pode ser feita diretamente pelo aplicativo e-Título ou pelo Autoatendimento Eleitoral.</p>
+<p class="sd">Acesse www.tse.jus.br, depois clique em *Autoatendimento Eleitoral*, depois em *Transferir título eleitoral* na seção *Eleitor*.</p>
+<p class="sd">Você pode solicitar a transferência apenas até o dia 06 de maio de 2026.</p>
+<p class="sd">Caso prefira presencialmente, você pode comparecer à Sede do Cartório do Município onde você deseja votar </p>
+<p class="sd">Nesse link você encontra os endereços de todos os cartórios eleitorais do estado: https://www.tre-rn.jus.br/institucional/zonas-eleitorais/enderecos-eletronicos</p>
+</div>
+
+
+<div class="sc" data-k="transferencia com pendencia de biometria">
+<div class="shr"><div class="si">&#128070</div><div class="st"><h3>Pendência de biometria</h3></div></div>
+<p class="sd">Identificamos que há uma pendência de biometria em seu cadastro. Para realizar a transferência, você precisará comparecer presencialmente à Sede do Cartório do Município onde você deseja votar.</p>
+<p class="sd">Você pode consultar os endereços de todos os cartórios eleitorais do estado neste link: https://www.tre-rn.jus.br/institucional/zonas-eleitorais/enderecos-eletronicos</p>
+<p class="sd">É importante lembrar que mesmo com essa pendência você pode votar normalmente, se quiser votar no local onde você já vota normalmente</p>
+<p class="sd">Mas se quiser votar no outro município, você precisará regularizar a sua biometria presencialmente</p>
+</div>
+
+<div class="sc" data-k="transferencia com pendencia de multa">
+<div class="shr"><div class="si">&#128184</div><div class="st"><h3>Pendência de multa</h3></div></div>
+<p class="sd">Identificamos que há uma pendência de multa em seu cadastro. Para realizar a transferência, você precisará realizar a quitação da multa.</p>
+<p class="sd">No próprio site ou no aplicativo e-Titulo você consegue emitir a guia e realizar o pagamento</p>
+<p class="sd">Para fazer pelo site, acesse www.tse.jus.br, depois clique em *Autoatendimento Eleitoral*, depois em *Débitos eleitorais* na seção *Consultas*.</p>
+<p class="sd">Após a quitação da multa, você pode solicitar a transferência apenas até o dia 06 de maio de 2026.</p>
+<p class="sd">Depois da quitação da multa, para fazer a transferência pelo site, acesse www.tse.jus.br, depois clique em *Autoatendimento Eleitoral*, depois em *Transferir título eleitoral* na seção *Eleitor*.</p>
+<p class="sd">Caso prefira presencialmente, você pode comparecer à Sede do Cartório do Município onde você deseja votar </p>
+<p class="sd">Nesse link você encontra os endereços de todos os cartórios eleitorais do estado: https://www.tre-rn.jus.br/institucional/zonas-eleitorais/enderecos-eletronicos</p></div>
+
+<div class="sc" data-k="transferencia com título cancelado">
+<div class="shr"><div class="si">&#128070</div><div class="st"><h3>Título cancelado</h3></div></div>
+<p class="sd">Identificamos que o seu título eleitoral está cancelado. Para realizar a transferência, você precisará regularizar a situação do seu título.</p>
+<p class="sd">Você deve comparecer presencialmente ao Cartório Eleitoral do município onde você deseja votar</p>
+<p class="sd">Você pode consultar os endereços de todos os cartórios eleitorais do estado neste link: https://www.tre-rn.jus.br/institucional/zonas-eleitorais/enderecos-eletronicos</p>
+</div>
+</div>
+
+
+</div>
+</div>
+
+<!-- CANDIDATO - 4 SERVIÇOS -->
+<div id="candidato-content" class="tc">
+<div class="sh"><h2>Serviços para Candidatos</h2><p>4 serviços disponíveis</p></div>
+<div class="sg">
+
+<div class="sc" data-k="registro candidatura candidato eleicao">
+<div class="shr"><div class="si">📝</div><div class="st"><h3>Registro de Candidatura</h3><span class="badge">Sistema Online</span></div></div>
+<p class="sd">Informações e suporte sobre o sistema de registro de candidaturas para eleições.</p>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Contato:</span> <a href="https://wa.me/558436545455" target="_blank" rel="noopener noreferrer">(84) 3654-5455</a> (WhatsApp)</div></div>
+<div class="di"><span class="dii">🏢</span><div><span class="dil">Responsável:</span> SPDP/CGPP/SJ</div></div>
+</div>
+
+<div class="sc" data-k="prestacao contas campanha eleitoral spce candidato">
+<div class="shr"><div class="si">💰</div><div class="st"><h3>Prestação de Contas de Campanha</h3><span class="badge">Online</span></div></div>
+<p class="sd">Informações e suporte sobre prestação de contas de campanha eleitoral.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 15 dias</div></div>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Contato:</span> <a href="https://wa.me/558436545460" target="_blank" rel="noopener noreferrer">(84) 3654-5460</a> / <a href="https://wa.me/558436545462" target="_blank" rel="noopener noreferrer">3654-5462</a> (WhatsApp)</div></div>
+<div class="di"><span class="dii">✉️</span><div><span class="dil">E-mail:</span> contas.anuais@tre-rn.jus.br</div></div>
+</div>
+
+<div class="sc" data-k="diploma candidato eleito suplente deputado">
+<div class="shr"><div class="si">🏆</div><div class="st"><h3>Emissão de Diplomas</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Obtenção de diplomas para candidatos eleitos e suplentes. Candidatos eleitos e suplentes até 3ª colocação recebem automaticamente.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 15 dias</div></div>
+<div class="di"><span class="dii">✉️</span><div><span class="dil">E-mail:</span> gapsj@tre-rn.jus.br</div></div>
+</div>
+
+<div class="sc" data-k="sistema spce sro suporte prestacao contas">
+<div class="shr"><div class="si">💻</div><div class="st"><h3>Suporte nos Sistemas SPCE e SRO</h3><span class="badge">Online</span></div></div>
+<p class="sd">Orientações sobre sistemas de Prestação de Contas Eleitoral (SPCE) e Sistema de Regularização de Omissão (SRO - Contas Antigas).</p>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Contato:</span> <a href="https://wa.me/558436545460" target="_blank" rel="noopener noreferrer">(84) 3654-5460</a> / <a href="https://wa.me/558436545462" target="_blank" rel="noopener noreferrer">3654-5462</a> (WhatsApp)</div></div>
+<div class="di"><span class="dii">✉️</span><div><span class="dil">E-mail:</span> contas.anuais@tre-rn.jus.br</div></div>
+</div>
+
+</div>
+</div>
+
+<!-- PARTIDO - 5 SERVIÇOS -->
+<div id="partido-content" class="tc">
+<div class="sh"><h2>Serviços para Partidos Políticos</h2><p>5 serviços disponíveis</p></div>
+<div class="sg">
+
+<div class="sc" data-k="filiacao partido politico sgip filia">
+<div class="shr"><div class="si">👥</div><div class="st"><h3>Filiação Partidária</h3><span class="badge">Sistema Online</span></div></div>
+<p class="sd">Sistema de Gerenciamento de Informações Partidárias (SGIP) e Sistema de Filiação Partidária (FILIA). Consulta de filiações e informações partidárias.</p>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Contato:</span> <a href="https://wa.me/558436545455" target="_blank" rel="noopener noreferrer">(84) 3654-5455</a> (WhatsApp)</div></div>
+<div class="sa"><a href="https://filia2-consulta.tse.jus.br/" class="btn bp" target="_blank" rel="noopener noreferrer">Consultar Filiação</a></div>
+</div>
+
+<div class="sc" data-k="prestacao contas anual partido politico spca">
+<div class="shr"><div class="si">📊</div><div class="st"><h3>Prestação de Contas Anual</h3><span class="badge">Online</span></div></div>
+<p class="sd">Orientações e suporte sobre prestação de contas anual de partidos políticos.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 15 dias</div></div>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Contato:</span> <a href="https://wa.me/558436545460" target="_blank" rel="noopener noreferrer">(84) 3654-5460</a> / <a href="https://wa.me/558436545462" target="_blank" rel="noopener noreferrer">3654-5462</a> (WhatsApp)</div></div>
+<div class="di"><span class="dii">✉️</span><div><span class="dil">E-mail:</span> contas.anuais@tre-rn.jus.br</div></div>
+</div>
+
+<div class="sc" data-k="certidao composicao orgao partido politico diretorio">
+<div class="shr"><div class="si">📜</div><div class="st"><h3>Certidão de Composição de Órgão Partidário</h3><span class="badge">Online</span></div></div>
+<p class="sd">Expedição de certidão da composição do partido político no âmbito estadual e municipal.</p>
+<div class="sa"><a href="https://www.tse.jus.br/partidos/partidos-registrados-no-tse/informacoes-partidarias/modulo-consulta-sgip3" class="btn bp" target="_blank" rel="noopener noreferrer">Consultar Online</a></div>
+</div>
+
+<div class="sc" data-k="registro orgao partido politico formacao diretorio">
+<div class="shr"><div class="si">🏛️</div><div class="st"><h3>Certidão de Registro de Órgão Partidário</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Emissão de certidão de registro de órgão de partido político em formação no RN.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 15 dias</div></div>
+<div class="di"><span class="dii">✉️</span><div><span class="dil">E-mail:</span> spdp@tre-rn.jus.br</div></div>
+</div>
+
+<div class="sc" data-k="sistema spca suporte prestacao contas partido">
+<div class="shr"><div class="si">💻</div><div class="st"><h3>Suporte no Sistema SPCA</h3><span class="badge">Online</span></div></div>
+<p class="sd">Orientações técnico-operacionais sobre o Sistema de Prestação de Contas Anual (SPCA) de partidos políticos.</p>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Contato:</span> <a href="https://wa.me/558436545460" target="_blank" rel="noopener noreferrer">(84) 3654-5460</a> / <a href="https://wa.me/558436545462" target="_blank" rel="noopener noreferrer">3654-5462</a> (WhatsApp)</div></div>
+</div>
+
+</div>
+</div>
+
+<!-- ADVOGADO - 8 SERVIÇOS -->
+<div id="advogado-content" class="tc">
+<div class="sh"><h2>Serviços para Advogados</h2><p>8 serviços disponíveis</p></div>
+<div class="sg">
+
+<div class="sc" data-k="consulta processo pje andamento tramitacao">
+<div class="shr"><div class="si">🔍</div><div class="st"><h3>Consulta de Processos</h3><span class="badge">Online</span></div></div>
+<p class="sd">Acompanhamento de processos pelo PJe e SADP. Disponível 24 horas por dia com notificações push.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Imediato</div></div>
+<div class="di"><span class="dii">🔔</span><div><span class="dil">Recurso:</span> Acompanhamento Push via e-mail</div></div>
+<div class="sa"><a href="https://consultaunificadapje.tse.jus.br/#/public/inicial/index" class="btn bp" target="_blank" rel="noopener noreferrer">Consultar PJe</a></div>
+</div>
+
+<div class="sc" data-k="ajuizamento acao peticao protocolo pje">
+<div class="shr"><div class="si">⚖️</div><div class="st"><h3>Ajuizamento de Ações</h3><span class="badge">Online</span></div></div>
+<p class="sd">Protocolo de petições através do PJe, disponível 24 horas. Sem custas processuais.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Disponível:</span> 24 horas por dia, 7 dias por semana</div></div>
+<div class="di"><span class="dii">💰</span><div><span class="dil">Custas:</span> Não há custas em ações eleitorais</div></div>
+<div class="sa"><a href="http://www.tre-rn.jus.br/servicos-judiciais/PJe/pje-tre" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar PJe</a></div>
+</div>
+
+<div class="sc" data-k="pesquisa jurisprudencia decisao acordao tse">
+<div class="shr"><div class="si">📚</div><div class="st"><h3>Pesquisa Jurisprudencial</h3><span class="badge">Online</span></div></div>
+<p class="sd">Pesquise decisões do TRE-RN, TSE e legislação eleitoral.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 3 dias (pesquisas complexas)</div></div>
+<div class="di"><span class="dii">📧</span><div><span class="dil">E-mail:</span> sjl@tre-rn.jus.br</div></div>
+<div class="sa">
+<a href="https://www.tse.jus.br/hotsites/consultas-jurisprudencia/jurisprudencia.html" class="btn bp" target="_blank" rel="noopener noreferrer">Pesquisar</a>
+<a href="http://www.tre-rn.jus.br/jurisprudencia/pesquisa" class="btn bp" target="_blank" rel="noopener noreferrer">TRE-RN</a>
+</div>
+</div>
+
+<div class="sc" data-k="certidao processual andamento copia">
+<div class="shr"><div class="si">📜</div><div class="st"><h3>Certidão Processual</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Expedição de certidão relativa à execução de atos processuais.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 2 dias (partes) / 15 dias (terceiros)</div></div>
+<div class="di"><span class="dii">📧</span><div><span class="dil">E-mail:</span> gapsj@tre-rn.jus.br</div></div>
+</div>
+
+<div class="sc" data-k="certidao autuacao distribuicao processo">
+<div class="shr"><div class="si">📋</div><div class="st"><h3>Certidão sobre Autuação</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Expedição de certidão relativa à autuação de processos judiciais.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 15 dias</div></div>
+<div class="di"><span class="dii">📧</span><div><span class="dil">E-mail:</span> gapsj@tre-rn.jus.br</div></div>
+</div>
+
+<div class="sc" data-k="sustentacao oral sessao julgamento inscricao">
+<div class="shr"><div class="si">🎤</div><div class="st"><h3>Sustentação Oral</h3><span class="badge">Online</span></div></div>
+<p class="sd">Inscrição para sustentação oral nas sessões de julgamento da Corte Eleitoral.</p>
+<div class="di"><span class="dii">📅</span><div><span class="dil">Inscrição:</span> Até 24h antes da sessão</div></div>
+<div class="di"><span class="dii">ℹ️</span><div><span class="dil">Prazo:</span> A partir da publicação da pauta</div></div>
+<div class="sa"><a href="https://www.tre-rn.jus.br/servicos-judiciais/sustentacao-oral" class="btn bp" target="_blank" rel="noopener noreferrer">Inscrever</a></div>
+</div>
+
+<div class="sc" data-k="processo arquivado arquivo consulta vista">
+<div class="shr"><div class="si">📁</div><div class="st"><h3>Acesso a Processos Arquivados</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Realização de vista de processos judiciais arquivados para consulta ou cópia.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 2 dias</div></div>
+<div class="di"><span class="dii">📍</span><div><span class="dil">Onde:</span> Seção de Documentação e Protocolo</div></div>
+</div>
+
+<div class="sc" data-k="dje diario justica eletronico publicacao">
+<div class="shr"><div class="si">📰</div><div class="st"><h3>Publicações de Atos Judiciais (DJe)</h3><span class="badge">Online</span></div></div>
+<p class="sd">Disponibilização de decisões monocráticas, colegiadas e atos processuais através do Diário da Justiça Eletrônico.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Atualização:</span> Diária</div></div>
+<div class="sa"><a href="https://www.tre-rn.jus.br/jurisprudencia/diario-da-justica-eletronico" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar DJe</a></div>
+</div>
+
+</div>
+</div>
+
+<!-- INSTITUCIONAL - 14 SERVIÇOS -->
+<div id="institucional-content" class="tc">
+<div class="sh"><h2>Serviços Institucionais</h2><p>14 serviços de informação e transparência</p></div>
+<div class="sg">
+
+<div class="sc" data-k="temas selecionados jurisprudencia ementas periodico">
+<div class="shr"><div class="si">📑</div><div class="st"><h3>Temas Selecionados</h3><span class="badge">Online</span></div></div>
+<p class="sd">Periódico com seleção de ementas dos julgados do TRE-RN organizadas por assunto.</p>
+<div class="sa"><a href="https://www.tre-rn.jus.br/jurisprudencia/temas-selecionados" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar</a></div>
+</div>
+
+<div class="sc" data-k="informativo eleitoral periodico decisoes teses">
+<div class="shr"><div class="si">📰</div><div class="st"><h3>Informativo Eleitoral</h3><span class="badge">Online</span></div></div>
+<p class="sd">Periódico com principais teses jurisprudenciais do Plenário TRE-RN. Disponível em Linguagem Simples e Visual Law desde agosto/2025.</p>
+<div class="sa"><a href="https://www.tre-rn.jus.br/jurisprudencia/informativo-eleitoral" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar</a></div>
+</div>
+
+<div class="sc" data-k="decisoes resolucoes acordaos tribunal corte">
+<div class="shr"><div class="si">⚖️</div><div class="st"><h3>Decisões e Resoluções</h3><span class="badge">Online</span></div></div>
+<p class="sd">Inteiro teor dos acórdãos, resoluções e decisões monocráticas do TRE-RN com informações descritivas e temáticas.</p>
+<div class="sa"><a href="https://www.tse.jus.br/hotsites/consultas-jurisprudencia/jurisprudencia.html" class="btn bp" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+</div>
+
+<div class="sc" data-k="normas linguagem simples resolucoes portarias">
+<div class="shr"><div class="si">📖</div><div class="st"><h3>Normas em Linguagem Simples</h3><span class="badge">Online</span></div></div>
+<p class="sd">Resoluções e Portarias traduzidas para linguagem simples e acessível, com ícones, infográficos e podcasts com IA.</p>
+<div class="sa"><a href="https://www.tre-rn.jus.br/legislacao/normas-em-linguagem-simples" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar</a></div>
+</div>
+
+<div class="sc" data-k="banco decisoes propaganda eleitoral juiz auxiliar">
+<div class="shr"><div class="si">🗂️</div><div class="st"><h3>Banco de Decisões</h3><span class="badge">Online</span></div></div>
+<p class="sd">Decisões dos juízes auxiliares da propaganda eleitoral em linguagem simples (pesquisa, propaganda, direito de resposta).</p>
+<div class="sa"><a href="https://www.tre-rn.jus.br/jurisprudencia/banco-de-decisoes" class="btn bp" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+</div>
+
+<div class="sc" data-k="sessoes plenarias gravadas video youtube">
+<div class="shr"><div class="si">📹</div><div class="st"><h3>Sessões Plenárias Gravadas</h3><span class="badge">Online</span></div></div>
+<p class="sd">Acesso aos julgamentos através das gravações das sessões plenárias da Corte do TRE-RN.</p>
+<div class="sa">
+<a href="http://www.tre-rn.jus.br/servicos-judiciais/sessoes-arquivadas" class="btn bp" target="_blank" rel="noopener noreferrer">Arquivadas</a>
+<a href="https://www.youtube.com/user/justicaeleitoralrn" class="btn bp" target="_blank" rel="noopener noreferrer">YouTube</a>
+</div>
+</div>
+
+<div class="sc" data-k="transmissao ao vivo sessao plenaria streaming">
+<div class="shr"><div class="si">📡</div><div class="st"><h3>Transmissão Ao Vivo</h3><span class="badge">Online</span></div></div>
+<p class="sd">Transmissão ao vivo pela internet das sessões plenárias da Corte do TRE-RN.</p>
+<div class="sa">
+<a href="http://www.tre-rn.jus.br/servicos-judiciais/sessao-plenaria-ao-vivo" class="btn bp" target="_blank" rel="noopener noreferrer">Assistir</a>
+<a href="https://www.youtube.com/user/justicaeleitoralrn" class="btn bp" target="_blank" rel="noopener noreferrer">YouTube</a>
+</div>
+</div>
+
+<div class="sc" data-k="resultados eleicoes estatisticas dados apuracao">
+<div class="shr"><div class="si">📊</div><div class="st"><h3>Resultados e Estatísticas</h3><span class="badge">Online</span></div></div>
+<p class="sd">Informações sobre resultados e estatísticas de eleições realizadas no Rio Grande do Norte.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Pesquisas:</span> Até 3 dias úteis</div></div>
+<div class="sa">
+<a href="https://www.tre-rn.jus.br/eleicoes/eleicoes-anteriores" class="btn bp" target="_blank" rel="noopener noreferrer">Eleições Anteriores</a>
+</div>
+</div>
+
+<div class="sc" data-k="revista potiguar eleitoral artigos publicacao">
+<div class="shr"><div class="si">📚</div><div class="st"><h3>Revista Potiguar Eleitoral</h3><span class="badge">Online</span></div></div>
+<p class="sd">Revista anual com artigos sobre Direito Constitucional, Eleitoral e Administrativo, além de acórdãos do TRE-RN.</p>
+<div class="sa"><a href="https://www.tre-rn.jus.br/jurisprudencia/revista-potiguar-eleitoral/potiguar-eleitoral" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar</a></div>
+</div>
+
+<div class="sc" data-k="escola judiciaria eje cidadania social educacao">
+<div class="shr"><div class="si">🎓</div><div class="st"><h3>Escola Judiciária Eleitoral (EJE)</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Ações institucionais de responsabilidade social, participação jovem, combate à corrupção e campanhas educacionais.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Resposta:</span> Até 5 dias úteis</div></div>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Tel:</span> (84) 3654-5702 / 5700 / 5703</div></div>
+<div class="di"><span class="dii">📧</span><div><span class="dil">E-mail:</span> gapeje@tre-rn.jus.br</div></div>
+</div>
+
+<div class="sc" data-k="biblioteca acervo livros periodicos consulta reje">
+<div class="shr"><div class="si">📚</div><div class="st"><h3>Consulta ao Acervo da Biblioteca</h3><span class="badge">Presencial/Online</span></div></div>
+<p class="sd">Acervo de livros e periódicos para consulta presencial ou virtual através da REJE.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Imediato</div></div>
+<div class="di"><span class="dii">⏰</span><div><span class="dil">Horário:</span> Expediente normal</div></div>
+<div class="sa"><a href="https://biblioteca.tse.jus.br/F?RN=607012199" class="btn bp" target="_blank" rel="noopener noreferrer">Catálogo REJE</a></div>
+</div>
+
+<div class="sc" data-k="imprensa jornalista assessoria comunicacao social">
+<div class="shr"><div class="si">📸</div><div class="st"><h3>Atendimento à Imprensa</h3><span class="badge">Imediato</span></div></div>
+<p class="sd">Atendimento a jornalistas e veículos de comunicação para garantir transparência e acesso às informações.</p>
+<div class="di"><span class="dii">📞</span><div><span class="dil">Tel:</span> (84) 3654-5030</div></div>
+<div class="di"><span class="dii">📧</span><div><span class="dil">E-mail:</span> ascom@tre-rn.jus.br</div></div>
+<div class="di"><span class="dii">📱</span><div><span class="dil">Redes:</span> @trernoficial (Instagram, TikTok, Facebook)</div></div>
+</div>
+
+<div class="sc" data-k="urna eletronica cessao emprestimo parametrizada comunitaria">
+<div class="shr"><div class="si">🗳️</div><div class="st"><h3>Cessão de Urna Eletrônica</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Empréstimo de urna eletrônica, equipamentos, sistemas e treinamento para eleições não oficiais (entidades públicas e privadas).</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Até 60 dias</div></div>
+<div class="di"><span class="dii">📋</span><div><span class="dil">Requisito:</span> Solicitação com 60 dias de antecedência mínima</div></div>
+<div class="di"><span class="dii">📍</span><div><span class="dil">Onde:</span> Secretaria TRE-RN (capital) ou Cartório (interior)</div></div>
+<div class="sa"><a href="http://www.tre-rn.jus.br/eleicoes/eleicoes-comunitarias" class="btn bp" target="_blank" rel="noopener noreferrer">Mais Info</a></div>
+</div>
+
+<div class="sc" data-k="balcao virtual atendimento online videoconferencia">
+<div class="shr"><div class="si">💻</div><div class="st"><h3>Balcão Virtual</h3><span class="badge">Online</span></div></div>
+<p class="sd">Atendimento telepresencial por videoconferência durante horário de expediente. Disponível para todos os públicos.</p>
+<div class="di"><span class="dii">📞</span><div><span class="dil">WhatsApp:</span> Agendar previamente na unidade desejada</div></div>
+<div class="di"><span class="dii">⏰</span><div><span class="dil">Horário:</span> Segunda a sexta, 8h-14h</div></div>
+<div class="sa"><a href="https://www.tre-rn.jus.br/servicos-judiciais/balcao-virtual" class="btn bp" target="_blank" rel="noopener noreferrer">Agendar</a></div>
+</div>
+
+</div>
+</div>
+
+<!-- MEMÓRIA - 5 SERVIÇOS -->
+<div id="memoria-content" class="tc">
+<div class="sh"><h2>Centro de Memória e Acervo</h2><p>5 serviços de preservação histórica</p></div>
+<div class="sg">
+
+<div class="sc" data-k="centro memoria acervo historico museu virtual">
+<div class="shr"><div class="si">🏛️</div><div class="st"><h3>Acervo do Centro de Memória</h3><span class="badge">Presencial/Virtual</span></div></div>
+<p class="sd">Exposição do acervo da memória da Justiça Eleitoral no RN: documentos, fotos, objetos e bens de valor histórico.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> Imediato</div></div>
+<div class="di"><span class="dii">⏰</span><div><span class="dil">Horário:</span> 8h30 às 13h30</div></div>
+<div class="di"><span class="dii">👥</span><div><span class="dil">Grupos:</span> Até 25 pessoas (agendar)</div></div>
+<div class="di"><span class="dii">📧</span><div><span class="dil">E-mail:</span> ncem@tre-rn.jus.br</div></div>
+<div class="sa"><a href="https://sites.google.com/view/museu-virtual-do-trern" class="btn bp" target="_blank" rel="noopener noreferrer">Museu Virtual</a></div>
+</div>
+
+<div class="sc" data-k="exposicao tematica biografica pioneirismo mulheres">
+<div class="shr"><div class="si">🖼️</div><div class="st"><h3>Exposição Temática/Biográfica</h3><span class="badge">Presencial/Virtual</span></div></div>
+<p class="sd">Exposições sobre temas eleitorais: pioneirismo das mulheres (1927), instalação da Justiça Eleitoral, eventos especiais.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Conforme:</span> Calendário do Plano Anual</div></div>
+<div class="di"><span class="dii">📧</span><div><span class="dil">E-mail:</span> ncem@tre-rn.jus.br</div></div>
+<div class="sa"><a href="https://sites.google.com/view/museu-virtual-do-trern" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar</a></div>
+</div>
+
+<div class="sc" data-k="pesquisa memoria institucional historica eleicao antiga">
+<div class="shr"><div class="si">🔍</div><div class="st"><h3>Pesquisas de Memória Institucional</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Informações sobre acervo histórico: resultados eleições antigas, evolução urnas/títulos/cédulas, voto feminino.</p>
+<div class="di"><span class="dii">⏱️</span><div><span class="dil">Prazo:</span> 2 a 30 dias úteis (complexidade)</div></div>
+<div class="di"><span class="dii">⏰</span><div><span class="dil">Horário:</span> 8h30 às 13h30</div></div>
+<div class="di"><span class="dii">📧</span><div><span class="dil">E-mail:</span> ncem@tre-rn.jus.br</div></div>
+</div>
+
+<div class="sc" data-k="colecao memoria eleitoral cartilha publicacao historia">
+<div class="shr"><div class="si">📚</div><div class="st"><h3>Coleção Memória Eleitoral</h3><span class="badge">Online</span></div></div>
+<p class="sd">Cartilhas elaboradas pelo Centro de Memória sobre temas histórico-eleitorais: evolução dos títulos, Justiça Eleitoral no RN (sedes), Justiça Eleitoral nas constituições federais, voto feminino.</p>
+<div class="sa"><a href="https://sites.google.com/view/museu-virtual-do-trern" class="btn bp" target="_blank" rel="noopener noreferrer">Acessar Coleção</a></div>
+</div>
+
+<div class="sc" data-k="visita guiada grupo estudante escola educacao">
+<div class="shr"><div class="si">👥</div><div class="st"><h3>Visitas Guiadas</h3><span class="badge">Presencial</span></div></div>
+<p class="sd">Visitas guiadas para grupos de estudantes, pesquisadores e público em geral ao Centro de Memória.</p>
+<div class="di"><span class="dii">👥</span><div><span class="dil">Limite:</span> 25 pessoas por turma</div></div>
+<div class="di"><span class="dii">⏰</span><div><span class="dil">Horário:</span> 8h30 às 13h30</div></div>
+<div class="di"><span class="dii">📋</span><div><span class="dil">Requer:</span> Agendamento prévio</div></div>
+<div class="sa"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd5J5IavNsqmhbn9Yg0Ol-edoWtidL6eUSup44_FaJU1ER0BQ/viewform" class="btn bp" target="_blank" rel="noopener noreferrer">Agendar</a></div>
+</div>
+
+</div>
+</div>
+
+<!-- CONTATO -->
+<div id="contato-content" class="tc">
+<div class="sh"><h2>Entre em Contato</h2><p>Todos os canais de atendimento do TRE-RN</p></div>
+<div class="cg">
+
+<div class="cc">
+<h3>📍 Endereço Principal</h3>
+<div class="ci">Av. Rui Barbosa, 165 – Tirol<br>CEP: 59.015-290 - Natal/RN<br>CNPJ: 05.792.645/0001-28</div>
+</div>
+
+<div class="cc">
+<h3>📞 Telefone Central</h3>
+<div class="ci">(84) 3654-6000</div>
+</div>
+
+<div class="cc">
+<h3>🕐 Horários</h3>
+<div class="ci"><strong>TRE-RN (Sede):</strong> Segunda a sexta, 8h-14h<br><strong>Período eleitoral:</strong> 8h-19h + plantões<br><br><strong>Zonas Eleitorais:</strong> Segunda a sexta, 8h-13h</div>
+</div>
+
+<div class="cc">
+<h3>🤖 Atendente Virtual Celina</h3>
+<div class="ci"><strong>WhatsApp:</strong> 0800 084 6464<br>Tire suas dúvidas sobre serviços eleitorais 24h por dia, 7 dias por semana</div>
+</div>
+
+<div class="cc">
+<h3>💬 Ouvidoria</h3>
+<div class="ci"><strong>E-mail:</strong> ouvidoria@tre-rn.jus.br<br><strong>Tel:</strong> (84) 3654-5190 / 5192 / 5193<br><strong>WhatsApp:</strong> <a href="https://wa.me/558436545193" target="_blank" rel="noopener noreferrer">(84) 3654-5193</a><br><strong>SAC (formulário eletrônico):</strong> <a href="https://www.tre-rn.jus.br/transparencia-e-prestacao-de-contas/acesso-a-informacao/ouvidoria-eleitoral/ouvidoria" target="_blank" rel="noopener noreferrer">Acessar SAC-JE</a></div>
+</div>
+
+<div class="cc">
+<h3>👩 Ouvidoria da Mulher</h3>
+<div class="ci"><strong>Tel/WhatsApp:</strong> <a href="https://wa.me/558436546400" target="_blank" rel="noopener noreferrer">(84) 3654-6400</a><br><strong>E-mail:</strong> falamulher@tre-rn.jus.br</div>
+</div>
+
+<div class="cc">
+<h3>🌐 Site e Redes</h3>
+<div class="ci"><strong>Site:</strong> <a href="http://www.tre-rn.jus.br/" target="_blank" rel="noopener noreferrer">www.tre-rn.jus.br</a><br><strong>Fale Conosco:</strong> <a href="https://fale-conosco.tre-rn.jus.br/publico/demanda" target="_blank" rel="noopener noreferrer">Formulário</a></div>
+</div>
+
+<div class="cc">
+<h3>📧 E-mails Principais</h3>
+<div class="ci">
+<strong>Gabinete SJ:</strong> gapsj@tre-rn.jus.br<br>
+<strong>Contas:</strong> contas.anuais@tre-rn.jus.br<br>
+<strong>Dados Partidários:</strong> spdp@tre-rn.jus.br<br>
+<strong>Escola Judiciária:</strong> gapeje@tre-rn.jus.br<br>
+<strong>Centro de Memória:</strong> ncem@tre-rn.jus.br
+</div>
+</div>
+
+<div class="cc">
+<h3>📞 Balcão Virtual (WhatsApp)</h3>
+<div class="ci">
+<strong>GAPSJ:</strong> <a href="https://wa.me/558436545403" target="_blank" rel="noopener noreferrer">3654-5403</a> / <a href="https://wa.me/558436545404" target="_blank" rel="noopener noreferrer">5404</a> / <a href="https://wa.me/558436545405" target="_blank" rel="noopener noreferrer">5405</a><br>
+<strong>SPDP:</strong> <a href="https://wa.me/558436545455" target="_blank" rel="noopener noreferrer">3654-5455</a><br>
+<strong>SPE:</strong> <a href="https://wa.me/558436545454" target="_blank" rel="noopener noreferrer">3654-5454</a><br>
+<strong>SACEP:</strong> <a href="https://wa.me/558436545462" target="_blank" rel="noopener noreferrer">3654-5462</a><br>
+<strong>CRE:</strong> <a href="https://wa.me/558436545063" target="_blank" rel="noopener noreferrer">3654-5063</a><br>
+<strong>Presidência:</strong> <a href="https://wa.me/558436545003" target="_blank" rel="noopener noreferrer">3654-5003</a>
+</div>
+</div>
+
+<div class="cc">
+<h3>🏛️ Cartórios Eleitorais</h3>
+<div class="ci">60 Zonas Eleitorais no RN<br><strong>Horário:</strong> Segunda a sexta, 8h-13h<br><a href="https://www.tre-rn.jus.br/institucional/zonas-eleitorais/enderecos-eletronicos" target="_blank" rel="noopener noreferrer" class="btn bp" style="margin-top:1rem">Lista Completa</a></div>
+</div>
+
+</div>
+
+<div class="ib">
+<h3>Canais da Ouvidoria</h3>
+<p style="margin-bottom:1rem">7 formas de entrar em contato com a Ouvidoria Eleitoral:</p>
+<ul>
+<li><strong>Correspondência:</strong> Av. Rui Barbosa, 165, Tirol, CEP 59015-290</li>
+<li><strong>Pessoalmente:</strong> No endereço acima</li>
+<li><strong>Formulário eletrônico:</strong> <a href="https://fale-conosco.tre-rn.jus.br/publico" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline">Acesse aqui</a></li>
+<li><strong>SAC – Serviço de Atendimento ao Cidadão:</strong> <a href="https://www.tre-rn.jus.br/transparencia-e-prestacao-de-contas/acesso-a-informacao/ouvidoria-eleitoral/ouvidoria" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline">Acessar SAC-JE</a></li>
+<li><strong>E-mail:</strong> ouvidoria@tre-rn.jus.br</li>
+<li><strong>Telefones:</strong> (84) 3654-5190 / 3654-5192</li>
+<li><strong>WhatsApp Business:</strong> <a href="https://wa.me/558436545193" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline">(84) 3654-5193</a></li>
+</ul>
+</div>
+
+</div>
+
+</main>
+
+<footer class="ft">
+
+</footer>
+
+<script data-cfasync="false" src="./Carta de Serviços ao Cidadão - TRE-RN_files/email-decode.min.js"></script>
+<script>
+// CONTADOR DE ACESSOS
+(function(){
+  var count = parseInt(localStorage.getItem('trern_carta_visits') || '0') + 1;
+  localStorage.setItem('trern_carta_visits', count);
+  var total = parseInt(localStorage.getItem('trern_carta_visits_total') || '0') + 1;
+  localStorage.setItem('trern_carta_visits_total', total);
+  document.getElementById('visit-count').textContent = total.toLocaleString('pt-BR');
+})();
+
+// PESQUISA DE SATISFAÇÃO
+(function(){
+  var key = 'trern_carta_satisfaction';
+  var stars = document.querySelectorAll('.star');
+  var resultEl = document.getElementById('satisfaction-result');
+
+  function getStats(){
+    return JSON.parse(localStorage.getItem(key) || '{"total":0,"sum":0}');
+  }
+  function renderStars(val){
+    stars.forEach(function(s){
+      s.style.opacity = parseInt(s.dataset.v) <= val ? '1' : '0.3';
+    });
+  }
+  function showResult(){
+    var stats = getStats();
+    if(stats.total === 0){ resultEl.textContent = 'Seja o primeiro a avaliar!'; return; }
+    var avg = (stats.sum / stats.total).toFixed(1);
+    resultEl.textContent = 'Média: ' + avg + ' ★  (' + stats.total.toLocaleString('pt-BR') + ' avaliações)';
+    renderStars(Math.round(stats.sum / stats.total));
+  }
+
+  var voted = localStorage.getItem(key + '_voted');
+  if(voted){
+    document.getElementById('stars-input').style.pointerEvents = 'none';
+    renderStars(parseInt(voted));
+    showResult();
+  } else {
+    showResult();
+    stars.forEach(function(s){
+      s.addEventListener('mouseover', function(){ renderStars(parseInt(s.dataset.v)); });
+      s.addEventListener('mouseout', showResult);
+      s.addEventListener('click', function(){
+        var val = parseInt(s.dataset.v);
+        var stats = getStats();
+        stats.total += 1; stats.sum += val;
+        localStorage.setItem(key, JSON.stringify(stats));
+        localStorage.setItem(key + '_voted', val);
+        document.getElementById('stars-input').style.pointerEvents = 'none';
+        renderStars(val);
+        resultEl.textContent = 'Obrigado pela sua avaliação!';
+        setTimeout(showResult, 1500);
+      });
+    });
+  }
+})();
+</script><script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tc');
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabName = this.dataset.tab;
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            
+            this.classList.add('active');
+            const targetContent = document.getElementById(tabName + '-content');
+            
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+            
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    });
+    
+    const searchInput = document.getElementById('s');
+    const allServiceCards = document.querySelectorAll('.sc');
+    const allTabContents = document.querySelectorAll('.tc');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            
+            // Se a busca estiver vazia, restaurar estado normal
+            if (query === '') {
+                allServiceCards.forEach(card => card.style.display = '');
+                document.querySelectorAll('.no-results').forEach(el => el.remove());
+                
+                // Voltar para aba ativa anterior ou início
+                const activeTab = document.querySelector('.tab.active');
+                if (activeTab) {
+                    const tabName = activeTab.dataset.tab;
+                    allTabContents.forEach(c => c.classList.remove('active'));
+                    const targetContent = document.getElementById(tabName + '-content');
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                }
+                return;
+            }
+            
+            let foundCards = [];
+            let totalFound = 0;
+            
+            // Buscar em TODOS os cards de TODAS as abas
+            allServiceCards.forEach(card => {
+                const keywords = (card.dataset.k || '').toLowerCase();
+                const title = (card.querySelector('h3')?.textContent || '').toLowerCase();
+                const description = (card.querySelector('.sd')?.textContent || '').toLowerCase();
+                const details = Array.from(card.querySelectorAll('.di')).map(d => d.textContent.toLowerCase()).join(' ');
+                
+                const searchText = keywords + ' ' + title + ' ' + description + ' ' + details;
+                
+                if (searchText.includes(query)) {
+                    card.style.display = '';
+                    foundCards.push(card);
+                    totalFound++;
+                } else {
+                    card.style.display = 'none';
+                               }
+            });
+            
+            document.querySelectorAll('.no-results').forEach(el => el.remove());
+            
+            allTabContents.forEach(content => {
+                const cardsInTab = content.querySelectorAll('.sc');
+                let hasVisibleCards = false;
+                
+                cardsInTab.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        hasVisibleCards = true;
+                    }
+                });
+                
+                if (hasVisibleCards) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+            
+            if (totalFound === 0) {
+                allTabContents.forEach(c => c.classList.remove('active'));
+                
+                const firstContent = allTabContents[0];
+                if (firstContent) {
+                    firstContent.classList.add('active');
+                    const noResults = document.createElement('div');
+                    noResults.className = 'no-results';
+                    noResults.style.cssText = 'text-align:center;padding:3rem;color:var(--txt2);font-size:1.2rem';
+                    noResults.innerHTML = '<p>🔍 Nenhum serviço encontrado para "<strong>' + e.target.value + '</strong>"</p><p style="margin-top:1rem;font-size:1rem">Tente usar outras palavras-chave ou termos diferentes</p>';
+                    firstContent.appendChild(noResults);
+                }
+            } else {
+                const firstVisibleContent = document.querySelector('.tc.active');
+                if (firstVisibleContent) {
+                    const resultsCounter = document.createElement('div');
+                    resultsCounter.className = 'no-results';
+                    resultsCounter.style.cssText = 'background:var(--s);color:#fff;padding:1rem;border-radius:0.5rem;margin-bottom:2rem;text-align:center;font-weight:600';
+                    resultsCounter.innerHTML = '✅ ' + totalFound + ' serviço' + (totalFound !== 1 ? 's' : '') + ' encontrado' + (totalFound !== 1 ? 's' : '') + ' para "' + e.target.value + '"';
+                    firstVisibleContent.insertBefore(resultsCounter, firstVisibleContent.firstChild);
+                }
+            }
+        });
+    }
+    
+    console.log('Sistema de navegação carregado!');
+});
+</script>
+
+
+</body></html>
